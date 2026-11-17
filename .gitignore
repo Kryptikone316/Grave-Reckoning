@@ -1,0 +1,6 @@
+# build output, screenshots and scratch
+build/
+*.mipsel
+*.o
+# third-party fonts kept locally for reference only (licences differ)
+Extras/Fonts/

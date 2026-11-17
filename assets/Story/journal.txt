@@ -1,0 +1,490 @@
+# Grave Reckoning: the Journal. Plain text, edit freely.
+#
+#   entry <id>
+#   style  parchment | clipping | scrawl | tally | record
+#                                      (letters and ledgers | newspaper | the investigator's own hand | a count)
+#                                      record: no text lines; the page fills itself in from the save (the investigator's running tally)
+#   title  <heading>
+#   source <who wrote it, or where it was found>
+#   unlock free | chapter N | finale | graves N | lanterns N | deed KIND N
+#                                      (chapter N: settle that chapter's last grave; graves N: settle N graves
+#                                       in total on any vigil; lanterns N: put out N lanterns)
+#                                      deed KIND N: something the player did, counted quietly. KIND is one of
+#                                       stumbles (pursuers who walked into an open grave), offerings (flames
+#                                       gathered), flawless (graves settled without losing a life), shut
+#                                       (times "The Way Is Shut" was proved), rite (most pursuers laid to
+#                                       rest together in one rite) and hard (chapters settled on the hardest
+#                                       vigil, The Faithful).
+#   book   casebook | earlier          (casebook, the default: the investigator's own pages. earlier: pages
+#                                       from the hands that held this book before, bound in; shown in the
+#                                       Journal's second book, L1 / R1 to turn to it)
+#   era    <year>                      (earlier pages: sets the paper and the ink; 1264 vellum, 1587 brown
+#                                       paper, 1741 laid paper, 1864 a notebook)
+#   margin <hand> <words>      (a note in another keeper's handwriting, below the page text; hand is
+#                               teacher (blue-black ink, brisk), elder (faded brown, small) or pencil (grey
+#                               pencil, a sceptic). They question and argue with the page, and with the
+#                               investigator's own notes; they never settle anything. Keep each short;
+#                               a page that is already full drops its notes (the text audit says so))
+#   hint   <text>                      (shown under a locked page; the older hands leave one, in their own
+#                                       voice, as the only clue to what unlocks it. Nothing else says so)
+#   text   <a paragraph>               (as many as fit; about 600 characters in all)
+#
+# Redaction inside a paragraph:  [[struck through, still readable]]  and
+# {{blacked out with ink}}. The words inside {{ }} are never shown; they only set
+# the length of the bar, so a row of x's will do.
+# Wear: ((worn away)). The book's own entropy: the words are simply gone, with a faint stain
+# and a gap the length of the words inside. Use it very sparsely (about one page in four),
+# never on a word the page cannot do without, and never on the investigator's own pages: they
+# are fresh. Decide each gap by hand so wear cannot swallow a key word.
+#
+# The book is a community's, passed down: lent, never given, from a teacher who asks after the
+# dead of this district to the protege who takes it on (the player). Earlier keepers have bound in
+# what they found, which is why the second book has pages from 1264, 1587, 1741 and 1864, the
+# four years the oldest registers mark. They are written the way their century wrote, and each
+# understands the Inheritance in its own terms (a judgement, witchcraft, a distemper of the blood,
+# a nervous condition) and none of them is right. Each ends badly. None says it is a cycle, none
+# is named, and the 1264 leaf is only a distant atrocity that a later keeper copied in for one word.
+#
+# The Journal is the casebook of an unnamed investigator, a Victorian
+# correspondent who is following the story, probably to their own grave. The
+# printed pages are what they collected. The scrawl pages, and the marks that
+# crowd the margins of every page as the player settles graves, are their own
+# hand, steadily less steady. Never name them.
+#
+# The entries are shown in the order they appear here, which is the order of
+# the story, so the Journal reads as one account however the pages were found.
+# Rules from the lore: the young man's death is never shown; his name is never
+# given (it is torn away or left blank); nobody states what the cycle is.
+
+entry flyleaf
+style parchment
+title The Flyleaf
+source Inside the cover, in a firm old hand
+unlock free
+text This book belongs to no one. It is lent, never given, from one who asks after the dead of this district to the next, and it has had more keepers than I was told.
+text I had it from my teacher, as you have it from me. Add what you learn. Add your pages, and not your name.
+text It does not tell you what happened. It shows you. Read a grave, and you will stand in it.
+text And if the old pages begin to read as though they were written for you, close the book and go home. I did not.
+
+entry record
+style record
+title The Record of the Vigils
+source In the investigator's hand, kept up as I go
+unlock free
+margin teacher Count to know where you stand.
+
+entry testimonial
+style parchment
+title A Testimonial
+source Unsigned, kept with the school papers
+unlock free
+text He is the ((cleverest)) boy I have taught, and the most set on being something beyond this parish. He asks questions I cannot answer, and does not let them go when I say so.
+text I would ask only that his family not lay upon him more than one young man can carry. They speak of his future as though it were already assured. It is a heavy thing, to be assured of.
+margin elder Who kept this, and why?
+
+entry notice
+style clipping
+title A Notice of Death
+source The Aldercross Courier
+unlock free
+text DEATH. On the 14th instant, at the family seat, after a brief and lamentable accident, {{xxxxxxxxxxxxxxxx}}, only son of the house, in his twenty-third year.
+text A young man of rare promise, lately intended for the Continent, where it was thought he would do much to restore the credit of an old name. The funeral will take place on Thursday at the parish chapel.
+
+entry funeral
+style clipping
+title The Late Young Gentleman
+source The Aldercross Courier
+unlock free
+text A numerous company attended the burial in a driving rain, and the Reverend read the service. Several gentlemen spoke warmly of the departed's prospects. It was remarked that those most eloquent in his praise had been seldom seen at his father's table in the spring.
+text The mother was much overcome. The father stood throughout, and said nothing.
+
+entry sexton
+style parchment
+title Day-book of the Sexton
+source The old end of the churchyard
+unlock chapter 1
+text Rain again. Went to see the mound at the old end, for the stone looked wrong to me at ((dusk)). The earth has been pushed up from underneath. No spade marks. No footprints in or out. The stone leans, though the ground beneath it is whole.
+text Told the verger and no one else. I would put it plainly in the book if I could think how. Nobody dug this one.
+margin pencil Frost heave. Look at the date.
+
+entry verger
+style parchment
+title A Note from the Verger
+source To the Reverend, in haste
+unlock chapter 1
+text Sir, the stone on the Aldercross plot has leaned a hand's breadth since Tuesday. It bears the family device, the tree with its roots shown. I advise that it be left alone, and that the sexton be thanked and told nothing further.
+
+entry n1
+style scrawl
+title First Notes
+source In the investigator's hand
+unlock graves 4
+text Called at the old churchyard. The sexton says nobody dug it. The earth is fresh and the stone is old, and he sees nothing strange in both being true. Sextons are the last to lie, and the first to be believed.
+text Ask who paid for the stone.
+margin teacher Who SET the stone? Paying is another question.
+
+entry nbrief
+style scrawl
+title The Word Is Brief
+source In the investigator's hand
+unlock graves 7
+text The Courier calls it a brief and lamentable accident. I have asked eleven people what the accident was. Eleven have said brief.
+margin pencil Eleven agree. That is rehearsal, not proof.
+
+entry watch
+style parchment
+title Watch Log
+source The old cemetery, before dawn
+unlock chapter 2
+text Three men and four lanterns. Something moving among the stones that did not run when we raised the light. It turned and looked at us as a man looks at a man he knows.
+text The constable would have it a thing, not a person. "Lanterns up. It's loose." Entered as a disturbance, cause unknown.
+
+entry courier
+style clipping
+title A Disturbance at the Old Cemetery
+source The Aldercross Courier
+unlock chapter 2
+text Residents are asked to keep clear of the old burial ground after dark. The authorities incline to the view that persons unknown have been tampering with certain monuments.
+text Lanterns seen among the graves are those of the ((Watch)). It is regretted that several of the Watch have not since reported for duty.
+
+entry missing
+style clipping
+title Two of the Watch Not Reported
+source The Aldercross Courier
+unlock lanterns 8
+text The constable regrets that two men of the Watch have not been seen since Tuesday night. Their lanterns were found upon the old path, set side by side, and put out.
+text No other trace has been discovered. The inquiry continues, and the public is again asked to keep from the old burial ground after dark.
+
+entry n2
+style scrawl
+title Third Night
+source In the investigator's hand
+unlock graves 11
+text The Watch will not speak of lanterns. Four lit at dusk. Three at dawn. I have begun to keep count.
+
+entry tally
+style tally
+title The Count
+source In the investigator's hand
+unlock lanterns 1
+text One stroke for every lantern put out.
+
+entry measure
+style parchment
+title The Grave's Measure
+source A saying of the district, taken down at market
+unlock lanterns 20
+text In the villages they call it the Dance of Death, or the Grave's Measure. The living keep him in. He keeps the living in. The grave takes whoever is brought to it, and asks nothing.
+text The old woman who told me would not say who leads.
+
+entry ossuary
+style parchment
+title Register of the Ossuary
+source Extract, in the Keeper's hand
+unlock chapter 3
+text All accounted for: every bone sorted, entered and sealed, by row and by family.
+text Beside certain names, in the margins of the oldest books, a different hand has written: 1264, Unquiet. 1587, Returned. 1741, Unreconciled. 1864, Account unsettled.
+
+entry margin
+style parchment
+title The Keeper's Margin
+source Written small, beneath the last entry
+unlock chapter 3
+text I have gone back through every one of them. Each was buried wrong: a register altered; a witness who was never found; a lid closed before the prayers were said; a death written down before the day.
+text I used to think it was the suffering that raised them. I think now it is the hiding of it. We sorted them all. Not this one.
+margin pencil Hiding is also what the grieving do.
+
+entry n3
+style scrawl
+title On the Ledger
+source In the investigator's hand
+unlock graves 17
+text The ledger is genuine. The register has been cut. Someone wished me to find the one and not the other.
+text I am no longer certain the book I am keeping is mine. [[I think I know who.]]
+margin teacher Ask why that page, and not the other.
+
+entry nlanterns
+style scrawl
+title What the Lanterns Mean
+source In the investigator's hand
+unlock graves 19
+text The Watch say he kills them. The Reverend says the earth claims them. The keeper of the bones says they are made to remember something, and will not say what.
+text No one has found a body. Only the lamps.
+
+entry nnames
+style scrawl
+title His Name
+source In the investigator's hand
+unlock graves 20
+text Every line that should hold his name holds something else. I wrote it out last night, looked away, and it was gone from the page.
+
+entry ledger
+style parchment
+title Undertaker's Ledger
+source A private account
+unlock chapter 4
+text Received in advance, in coin, with discretion. To the physician, {{xxxxxxxxxx}}, for his account to be amended. To the housemaid, dismissed with a character. To the parish clerk, {{xxxxxxxxxx}}, for one page to be removed.
+text The family wishes the matter closed. A fair price for a quiet burial. The family paid to forget. I was paid to remember nothing.
+margin pencil Coin proves a bribe. Not a motive.
+
+entry register
+style parchment
+title Page from the Family Register
+source Aldercross, births and deaths
+unlock chapter 4
+text A line has been scraped from the page with a knife. Under the scraping the first letters of a name remain, and a date of burial.
+text Of all the ink on the page, the burial entry is the freshest.
+
+entry physician
+style parchment
+title The Physician's Account, Amended
+source Struck lines retained
+unlock chapter 4
+text Cause: [[from neglect, and want of timely help]]. Amended: an unfortunate accident, in the ordinary course of the young gentleman's pursuits.
+text No further examination was thought necessary. Fee received, with thanks, and a little over.
+
+entry servant
+style parchment
+title A Character, Given on Leaving
+source Written for a housemaid, dismissed
+unlock chapter 4
+text The bearer has been four years in this house, and is honest, quiet and clean. She leaves at the end of the quarter, and has been paid in advance for the remainder of it.
+text She is understood to remember nothing of the household's affairs and to speak of none. Signed, {{xxxxxxxxxxxxxxxx}}.
+
+entry portrait
+style parchment
+title Beneath the Largest Portrait
+source Brass plate, the Family Crypt
+unlock chapter 4
+text ALDERCROSS.
+text {{xxxxxxxxxxxxxxxxxxxx}}, of this house and of this land.
+text The earth remembers.
+
+entry n4
+style scrawl
+title Sleep
+source In the investigator's hand
+unlock graves 23
+text I have stopped sleeping. I dream a window and rain, and a room I have never stood in.
+text He is always one stone ahead of me. I do not think he knows I follow. I do not think he would mind. [[I think he knows I follow.]]
+
+entry n25
+style scrawl
+title Association
+source In the investigator's hand
+unlock graves 25
+text The manuscripts say that in the end he will not tell the guilty from the merely acquainted. I have been acquainted with a great many people in this district. I have asked a great many questions.
+
+entry manuscript
+style parchment
+title From the Chapel Manuscripts
+source Of the Returned
+unlock chapter 5
+text They are not demons. They are petitioners: souls denied the finishing of their affairs, who seek redress by a power neither wholly holy nor wholly profane.
+text At first they seek those who wrought their end. Then those who hid it. At last all who profited by it. Beware: the petitioner forgets, in the end, to tell guilt from kinship.
+
+entry firstinterred
+style parchment
+title On a Heathen Superstition of the District
+source Read before the Antiquarian Society
+unlock chapter 5
+text It is held in these parts that certain families, older than the parish, made an agreement with the earth, and are called the First Interred. Its terms are not recorded.
+text Some say it was a shield for their children against unjust death. Some say a penance. A few say the families were not parties to it at all, but its prisoners. The Church has classed the whole as superstition.
+
+entry prayer
+style parchment
+title An Unfinished Prayer
+source Found beneath the altar cloth
+unlock chapter 5
+text Keep it quiet. Keep what lies below the altar asleep. It was never meant to wake, and for the first time in living memory it has begun to answer.
+text Grant that it will not-- [the page ends here]
+
+entry vestry
+style parchment
+title Vestry Inventory
+source In the Sacristan's hand
+unlock chapter 5
+text Item: the great key to the lower chamber, with its three fellows. Not turned within living memory. Item: the altar cloth, purple, renewed at Michaelmas. It is not to be lifted for cleaning.
+text The stair beneath is unsafe, and the ((sexton)) is to be told so, as his predecessors were.
+text Added in a second hand: the sound beneath the floor is the wind.
+
+entry letter
+style parchment
+title A Letter, Unsent
+source The Keeper of the Mausoleum
+unlock chapter 6
+text I attended the funeral. I said what one says. I knew he might have been spared, and I did nothing, and I have not slept properly since.
+text You will remember the old measures we took to keep him down: {{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}}. If you are reading this, they have failed.
+margin pencil Unsent. Then how did we come by it?
+
+entry fragments
+style parchment
+title What He Remembers
+source No author
+unlock chapter 6
+text His mother's hands, warm. A promise made beside a window on a rainy afternoon. Voices, arguing. Fear.
+text A room. A disagreement. Someone pleading for patience. Someone insisting there was no other way. Someone who was there, and turned away.
+
+entry n5
+style scrawl
+title The Hand Is Not Steady
+source In the investigator's hand
+unlock graves 28
+text Everyone I have spoken to knew more than they said. So, I think, did I.
+text I am beginning to recognise the hand that marked the oldest registers. It is not a comfortable thing to recognise. {{xxxxxxxxxxxxxxxxxxxxxxxx}}
+
+entry rubbing
+style parchment
+title Rubbing from the Lid
+source The oldest chamber
+unlock finale
+text E. ALDERCROSS. MDCCCLXIV.
+text Taken with charcoal from the stone lid. A second rubbing, from beneath the dust at the foot of the lid, reads: E. ALDERCROSS. MCCLXIV. He did not look closer.
+
+entry nlast
+style scrawl
+title The Last Note
+source The final page of the casebook
+unlock finale
+text The oldest chamber. I am going down. [[Not alone.]]
+text If these pages are found, keep them with the others.
+
+entry lastpage
+style parchment
+title The Last Page
+source Unnumbered
+unlock finale
+text The living had made their peace with his passing.
+text The dead had made no such arrangement.
+text [A further page follows. It has been left blank.]
+
+# ---- the earlier hands (the second book) ----
+
+entry e1264a
+style parchment
+title Of the Troubles in the Vale
+source A chronicle of 1264, copied in by a later keeper
+unlock lanterns 40
+book earlier
+era 1264
+hint Count the lamps, and count them again.
+text In this year, after Michaelmas, there was strife in the vale over the tithe. The lord held with the reeve, the abbot with the steward, and the hired spearmen with whoever had paid them last.
+text The great barn at the ford was barred from without and ((fired)), and of those within none came out. The abbot laid it upon the lord, the lord upon the spearmen, and the spearmen upon the weather. The brethren of the Temple, at their preceptory on the hill, kept their gates shut that night, and say they heard nothing. A brother of the German house, bound for Prussia, lay that night at the abbey and was gone by matins.
+
+entry e1264b
+style parchment
+title Of the Burying at the Ford
+source The same chronicle, a later leaf
+unlock deed offerings 20
+book earlier
+era 1264
+hint Gather what the dead leave behind.
+text The dead were put into the ground in haste, at the old end of the burial place, the priest being at the ((lord's)) table. The abbey roll was made up a season after, and the day of the burning was set down some days before it fell, by the steward's wish.
+text The brothers of the Hospital sent one of their number with salves for the spearmen, and he asked no questions and was thanked for it. The reeve swore the number was forty, and the miller swore it was more. Beside the roll a brother of a later age has written a single word, and no more: Unquiet.
+margin elder Forty, or more. Neither is a name.
+
+entry e1587a
+style parchment
+title A Deposition Taken at the Assizes
+source From a clerk's roll of 1587, copied out
+unlock deed stumbles 1
+book earlier
+era 1587
+hint The living are not always careful.
+text The sexton, being sworn, saith that on the night after Candlemas he did behold the earth at the old end broken from beneath, and that the thing which came up did look upon him as a man looketh upon one he knoweth.
+text He saith also that a wandering preacher, of the old ((southern)) sort, whom the vicar calls a heretic, lodged in the parish that week and was seen at the old end at dusk. He is gone.
+text Added below, in another hand: Kept on the word of the keeper before me, who thought it mattered. I cannot say what it proves.
+margin teacher 'Heretic': the vicar's word for anyone.
+
+entry e1587b
+style parchment
+title A Physician to His Friend
+source A letter of 1587, the seal broken
+unlock deed stumbles 6
+book earlier
+era 1587
+hint Wait, and they will fall.
+text I have been to the place, and will tell you plainly I find no witchcraft in it. I have examined witches, and they desire something. This desires only to be answered.
+text Of the six that followed it by night, two went headlong into pits they had themselves digged, being careless in the dark, and the rest would not look into the pits after. I would not look either.
+margin elder I looked. Do not.
+
+entry e1587c
+style parchment
+title The Last Leaf of the Physician
+source Found with his papers, unfinished
+unlock deed flawless 3
+book earlier
+era 1587
+hint Go a whole grave and take no harm.
+text I am advised to leave off, by the vicar, by the justice, and by my wife, who has not said so but has taken her mother's chair by the door. I shall leave off when I have the ((name)).
+text I have it nearly. It lies upon the tongue as a coin upon the tongue of the dead. He knows that I am asking. I do not think he minds. I think it is I who mind.
+
+entry e1741a
+style parchment
+title Observations upon a Singular Distemper
+source Read to a learned society in 1741, from the printed paper
+unlock deed rite 3
+book earlier
+era 1741
+hint Lay a company to rest together.
+text Gentlemen, having examined with some diligence the registers of this parish and of three adjacent, I am persuaded that we have to do with no spirit, but with a distemper of the blood, communicated by descent and excited by ((injury)), to which the vulgar give the name of the Unreconciled.
+text The cause, I submit, is natural. The cure, I confess, is not yet known to me.
+margin pencil Of the blood, or of the parish?
+
+entry e1741b
+style parchment
+title A Catalogue of Instances
+source The same paper, an appendix
+unlock deed offerings 60
+book earlier
+era 1741
+hint Be patient with the flames.
+text I have found in the registers, within the compass of five centuries, seven persons of whom the margin says that they Returned. Each, I find, was buried irregularly: a register altered, a witness wanting, a lid closed ((unprayed)) over, or a death entered before the day it fell.
+text I draw no conclusion. I observe only that a conclusion is being drawn.
+
+entry e1741c
+style parchment
+title A Letter to a Friend, Not Sent
+source Found in a vault beneath the church
+unlock deed shut 1
+book earlier
+era 1741
+hint Shut the way, and sit in the quiet.
+text I have taken a room below the church, that I may observe without being observed. It is dry. The door is ((stout)), and I find that nothing can come to me here, nor I to it.
+text It is very quiet. I find I have forgotten the manner of the latch, and I am not so much alarmed as I ought to be.
+margin pencil He forgot the latch. Who found the letter?
+
+entry e1864a
+style parchment
+title Notes of an Inquiry
+source From a casebook, passed on to its next keeper
+unlock deed flawless 10
+book earlier
+era 1864
+hint Be careful, and go on being careful.
+text I was given this book by an elder gentleman who had kept it twenty years, and who made me promise that I should not do as he had done. I promised. I have been in the district a fortnight and am already doing it.
+text The sexton will not speak of the ((stone)). The registers are in order, which is the first thing wrong with them.
+margin teacher He promised. So did you.
+
+entry e1864b
+style parchment
+title On the Condition of the Witnesses
+source The same casebook
+unlock deed hard 2
+book earlier
+era 1864
+hint Keep faith through two chapters of the worst.
+text I have now seen eleven persons who were present, and every one has the same look about the eyes. They are not frightened. They are waiting, as for a verdict.
+text Science will in time account for a condition of the ((nerves)). It will not account for why all eleven, unasked, describe the same sound, which is a stone drawn slowly over stone.
+
+entry e1864c
+style parchment
+title The Last Entry
+source The final leaf, in a shaking hand
+unlock deed hard 4
+book earlier
+era 1864
+hint Finish what the faithful finish.
+text I go down tonight to the oldest chamber. The Keeper has promised me the key, and I have promised myself that I shall only look.
+text If this book is found, give it to someone who will not read the last page. I wish I had been that someone.
+margin elder No date. Who closed the book?

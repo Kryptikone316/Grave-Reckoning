@@ -1,0 +1,27 @@
+Grave Reckoning: licence for the creative work
+==============================================
+
+The art (sprites, tiles, arenas, comic pages, concept sheets), the story, the
+lore and the Journal text, and the level designs of Grave Reckoning were made
+by the project owner, who has dedicated them to the public domain under the
+Creative Commons CC0 1.0 Universal Public Domain Dedication:
+
+    https://creativecommons.org/publicdomain/zero/1.0/
+
+To the extent possible under law, the project owner has waived all copyright
+and related or neighbouring rights to this work. You can copy, modify,
+distribute and use it, even for commercial purposes, without asking
+permission. No credit is required, though it is always welcome.
+
+This does not cover third-party files that ship with the game, which keep
+their own licences:
+
+  assets/Fonts/PirataOne-Regular.ttf          SIL Open Font License 1.1
+  assets/Fonts/UnifrakturCook-Bold.ttf        SIL Open Font License 1.1 (April 1st only)
+  assets/Fonts/CoveredByYourGrace.ttf        SIL Open Font License 1.1
+  assets/Vera.ttf                            Bitstream Vera licence
+
+The source code under src/ and tools/ is under the MIT licence (see LICENSE).
+
+Sound effects (assets/Sfx/*.wav): synthesised from scratch by tools/make_sfx.py (sines, decaying
+partials and filtered noise; no recordings or samples). CC0 1.0, like the rest of the art.

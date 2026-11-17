@@ -1,0 +1,213 @@
+# Grave Reckoning: story pages. Plain text, edit freely.
+#
+#   page <name> <layout>      layouts: 1 (one panel), 2 (two stacked), 2s (two side by side),
+#                             3 (wide on top, two below), 4 (2x2), comic, parchment
+#   panel <image>             a PNG in this folder (Panels/...), shown in layout order
+#   art <image>               comic layout: the whole comic page, one PNG (Comic/...), 456 px wide
+#   beat <x> <y> <w> <h>      comic layout: the strip of the page that one press of A reveals
+#                             (tools/slice_comic.py prints these, one per row of panels)
+#   caption <text>            narration box in the corner of the last panel (lines join)
+#   say <text>                speech balloon at the bottom of the last panel; on a comic page, a
+#                             see-through plate over the foot of that beat's strip, shown while it is
+#                             the newest strip
+#   speaker <NAME>            comic plates: the name above the line (capitals, short)
+#   at left|right             comic plates: which side of the strip, nearest the speaker
+#
+# A reveals the next panel, then the next page. START skips the rest. Pages are
+# looked up by name: "intro" before the first grave, "ch1".."ch6" at the start of
+# each chapter, "ch1b".."ch5b" at the start of the NEXT chapter, before its own pages (the
+# lead-up pages that bridge two chapters), "end".."end4" (with "end2b") and "epilogue" after the last grave.
+# Pages with the same name are shown in file order. Keep captions short: no more than
+# two or three short lines to a beat; on a comic page the words sit in a band under the art
+# (the latest caption and the latest spoken line seen so far).
+
+page intro 2
+panel Panels/intro_a.png
+caption The coffin was lowered. The earth was replaced. The grave was marked. The matter, everyone agreed, was finished.
+panel Panels/intro_b.png
+caption The dead, however, had not agreed to anything. Several nights later, the earth above the grave had shifted.
+
+# ---- chapter 1: The Forgotten Grave
+page ch1 comic
+art Comic/ch1_1.png
+beat 0 0 456 87
+caption In the oldest corner of the grounds, a grave long neglected stirred at last...
+beat 0 87 456 115
+say Nobody dug this one.
+speaker THE SEXTON
+at left
+beat 0 202 456 100
+
+page ch1 comic
+art Comic/ch1_2.png
+beat 0 0 456 118
+beat 0 118 456 77
+caption He remembered his mother's hands, and a promise made at a rainy window. Voices, arguing. Fear.
+beat 0 195 456 107
+
+# ---- chapter 2: The Old Cemetery (ch2b is its lead-up, shown at the start of chapter 3)
+page ch2 comic
+art Comic/ch2_1.png
+beat 0 0 456 302
+caption The living found the disturbance before dawn, and came with purpose...
+say Lanterns up. It's loose.
+speaker THE WATCH
+at right
+
+page ch2 comic
+art Comic/ch2_2.png
+beat 0 0 456 61
+beat 0 61 456 73
+beat 0 134 456 69
+caption Those the stones enclosed had their lanterns go dark.
+beat 0 203 456 99
+
+page ch2b comic
+art Comic/ch2_3.png
+beat 0 0 456 62
+beat 0 62 456 73
+beat 0 135 456 83
+beat 0 218 456 84
+caption Beneath the grounds lies the house of many bones, where even the dead are accounted for...
+
+# ---- chapter 3: The Ossuary (ch3b is its lead-up)
+page ch3 comic
+art Comic/ch3_1.png
+beat 0 0 456 62
+beat 0 62 456 62
+caption His name was in no register.
+beat 0 124 456 74
+beat 0 198 456 104
+say We sorted them all. Not this one.
+speaker THE KEEPER OF THE BONES
+at right
+
+page ch3 comic
+art Comic/ch3_2.png
+beat 0 0 456 61
+beat 0 61 456 76
+caption Every one of them had been buried wrong.
+beat 0 137 456 66
+beat 0 203 456 99
+
+page ch3b comic
+art Comic/ch3_3.png
+beat 0 0 456 61
+beat 0 61 456 71
+beat 0 132 456 78
+caption Some graves are not for the common dead, but for those whose names must never be spoken again...
+beat 0 210 456 92
+
+# ---- chapter 4: The Family Crypt (ch4b is its lead-up)
+page ch4 comic
+art Comic/ch4_1.png
+beat 0 0 456 67
+beat 0 67 456 72
+say The family paid to forget.
+speaker THE UNDERTAKER
+at left
+beat 0 139 456 78
+beat 0 217 456 85
+
+page ch4b comic
+art Comic/ch4_2.png
+beat 0 0 456 63
+beat 0 63 456 64
+beat 0 127 456 84
+beat 0 211 456 91
+caption At the chapel, the faithful gather, not for mourning, but for containment...
+
+# ---- chapter 5: The Chapel Grounds (ch5b is its lead-up)
+page ch5 comic
+art Comic/ch5_0.png
+beat 0 0 456 75
+beat 0 75 456 68
+beat 0 143 456 61
+beat 0 204 456 98
+
+page ch5 comic
+art Comic/ch5_1.png
+beat 0 0 456 64
+beat 0 64 456 73
+say Pray it stays quiet.
+speaker THE CLERIC
+at right
+beat 0 137 456 71
+beat 0 208 456 94
+
+page ch5b comic
+art Comic/ch5_2.png
+beat 0 0 456 62
+beat 0 62 456 72
+beat 0 134 456 70
+caption Something older than the church lay sealed beneath the altar.
+beat 0 204 456 98
+
+# ---- chapter 6: The Ancestral Mausoleum
+page ch6 3
+panel Panels/ch6_a.png
+caption At last, the heart of the grounds, where the oldest names still watch... and the truth remains sealed.
+panel Panels/ch6_b.png
+panel Panels/ch6_c.png
+say You were never meant to climb out.
+
+page ch6 comic
+art Comic/ch6_0.png
+beat 0 0 456 59
+beat 0 59 456 57
+beat 0 116 456 56
+beat 0 172 456 54
+beat 0 226 456 76
+
+page ch6 comic
+art Comic/ch6_1.png
+beat 0 0 456 76
+beat 0 76 456 65
+beat 0 141 456 71
+beat 0 212 456 90
+
+page end 1
+panel Panels/end_a.png
+caption After the last lantern went dark, the revenant reached the oldest chamber. The coffin bore his name: not the one he was known by in life, but his full ancestral name, and a burial date from before he was born.
+
+page end2 1
+panel Panels/end_b.png
+caption The same name. The same crest. Another date, centuries older. He did not look closer.
+
+page end2b comic
+art Comic/ch0_legacy.png
+beat 0 0 456 89
+beat 0 89 456 66
+beat 0 155 456 56
+beat 0 211 456 91
+
+page end3 comic
+art Comic/ch6_2.png
+beat 0 0 456 75
+beat 0 75 456 59
+beat 0 134 456 68
+beat 0 202 456 100
+
+page end4 comic
+art Comic/ch6_3.png
+beat 0 0 456 72
+beat 0 72 456 75
+beat 0 147 456 69
+beat 0 216 456 86
+
+page end4 comic
+art Comic/ch6_4.png
+beat 0 0 456 74
+beat 0 74 456 55
+beat 0 129 456 69
+beat 0 198 456 104
+
+page epilogue parchment
+panel
+caption The living had made their peace with his passing.
+panel
+caption The dead had made no such arrangement.
+panel
+caption # Grave Reckoning
+panel
+caption The end, or another beginning.
