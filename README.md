@@ -260,6 +260,9 @@ To use a different title font on a personal copy, put a file called
 - **Handwriting font** (the Journal): Covered By Your Grace, SIL Open Font License 1.1
   (`assets/Fonts/CoveredByYourGrace-OFL.txt`).
 - **Body font:** Bitstream Vera (`assets/Vera-COPYRIGHT.TXT`).
+- **Libraries in the package:** libogg and Tremor (Xiph.org, BSD-style). Every
+  third-party item and its licence is listed in `THIRD-PARTY-NOTICES.txt`, which
+  ships in the game folder. The font files are the unmodified originals.
 - **Inspiration:** *Rodent's Revenge* (Microsoft Entertainment Pack, 1991),
   and Maxx Boehme's Java remake *A Mouse's Vengeance*
   (<https://github.com/maxxboehme/A_Mouses_Vengeance>), which has no licence

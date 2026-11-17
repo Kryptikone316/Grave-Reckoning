@@ -22,6 +22,8 @@ their own licences:
   assets/Vera.ttf                            Bitstream Vera licence
 
 The source code under src/ and tools/ is under the MIT licence (see LICENSE).
+The shipped libogg and Tremor libraries and every font are listed, with their licences, in
+THIRD-PARTY-NOTICES.txt.
 
 Sound effects (assets/Sfx/*.wav): synthesised from scratch by tools/make_sfx.py (sines, decaying
 partials and filtered noise; no recordings or samples). CC0 1.0, like the rest of the art.
