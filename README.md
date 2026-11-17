@@ -35,8 +35,9 @@ of things better left unread, and a soundtrack that is all its own.
 
 ## Installing
 
-Grave Reckoning is built for the SF3500's Ports menu. Take the latest package from the
-[Releases](https://github.com/Kryptikone316/Grave-Reckoning/releases) page and copy it to the SD card so that you end up with:
+Grave Reckoning is built for the SF3500's Ports menu. Download the latest zip from the
+[Releases](https://github.com/Kryptikone316/Grave-Reckoning/releases) page and unzip it into the
+`roms/ports` folder on the SD card, so that you end up with:
 
 ```
 roms/ports/Grave Reckoning.sh
