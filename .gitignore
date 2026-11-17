@@ -4,3 +4,4 @@ build/
 *.o
 # third-party fonts kept locally for reference only (licences differ)
 Extras/Fonts/
+__pycache__/
